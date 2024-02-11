@@ -1,0 +1,28 @@
+.question-section {
+    border:aqua 4px solid;
+    border-radius: 25px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.question-text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:crimson;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.answer-text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:mediumvioletred;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.button-class {
+    color:red;
+    border-radius:30px;
+    background-color:bisque;
+    font-weight:700;
+    border-style: none;
+}

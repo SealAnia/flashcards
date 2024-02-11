@@ -1,0 +1,18 @@
+<p>item works!</p>
+
+<div class = "question-section">
+    <div [class] = "cards[counter].answered ? 'answer-text' : 'question-text'">
+        {{cards[counter].question}}
+    </div>
+
+    <form (ngSubmit)="checkAnswer()">
+        <div class = "newClass">
+            <input type = "text" name = "usersAnswer" [(ngModel)] = "cards[counter].answerFromUser">
+        </div>
+        <button (click) = "onCheckAnswer($event)"
+        *ngIf = "!cards[counter].answered" type = "submit"> ANSWER </button> 
+    </form>
+
+    <button (click) = "changeCard()" 
+    *ngIf = "counter < cards.length - 1"> NEXT </button>
+</div>
