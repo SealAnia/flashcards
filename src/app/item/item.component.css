@@ -1,28 +1,59 @@
 .question-section {
-    border:aqua 4px solid;
+    border: aqua 4px solid;
+    box-shadow: inset 0 0 80px aqua;
     border-radius: 25px;
-    padding: 15px;
+    padding: 25px;
     display: inline-block;
 }
 
 .question-text {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:crimson;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: crimson;
     font-size: 28px;
     font-weight: 600;
+
+    text-align: center;
 }
 
 .answer-text {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:mediumvioletred;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: mediumvioletred;
     font-size: 28px;
     font-weight: 600;
+
+    text-align: center;
 }
 
 .button-class {
-    color:red;
-    border-radius:30px;
-    background-color:bisque;
-    font-weight:700;
+    color: red;
+    border-radius: 30px;
+    background-color: bisque;
+    font-weight: 700;
     border-style: none;
+    text-align: center;
+    padding: 10px;
+    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+
+.correctAnswer {
+    color: greenyellow
+}
+
+.incorrectAnswer {
+    color: red;
+}
+
+.instruction {
+    font-size: 18px;
+    color: orange;
+    text-align: center;
+}
+
+.input_block_class {
+    display: block;
+    margin: 0 auto;
 }

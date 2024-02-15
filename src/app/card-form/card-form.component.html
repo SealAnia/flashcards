@@ -1,0 +1,13 @@
+<p>card-form works!</p>
+
+<div>
+    <form (ngSubmit) = "getACardFromUser()">
+        <input type = "text" name = "QUESTION" [(ngModel)] = "card.question">
+        <input type = "text" name = "ANSWER" [(ngModel)] = "card.answer">
+        <button (click) = "getACardFromUser" type = "submit">SUBMIT</button>
+    </form>
+</div> 
+
+<div *ngFor = "let card of cards">
+    {{card.question}} {{card.answer}}
+</div>

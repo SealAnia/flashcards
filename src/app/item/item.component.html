@@ -2,17 +2,37 @@
 
 <div class = "question-section">
     <div [class] = "cards[counter].answered ? 'answer-text' : 'question-text'">
+
+        <div *ngIf = "cards[counter].question == 'Demo question'"> 
+            <p class = "instruction">Press ANSWER to check your answer</p>
+        </div>
+
         {{cards[counter].question}}
     </div>
-
+    
     <form (ngSubmit)="checkAnswer()">
+        
         <div class = "newClass">
-            <input type = "text" name = "usersAnswer" [(ngModel)] = "cards[counter].answerFromUser">
+            <p>
+                <input class = "input_block_class" type = "text" id = "usersAnswer" name = "usersAnswer" 
+                [(ngModel)] = "cards[counter].answerFromUser">
+            </p> 
         </div>
-        <button (click) = "onCheckAnswer($event)"
-        *ngIf = "!cards[counter].answered" type = "submit"> ANSWER </button> 
+        <div>
+            <button class = "button-class" (click) = "onCheckAnswer($event)"
+            *ngIf = "!cards[counter].answered" type = "submit"> ANSWER </button>
+        </div>
     </form>
+
+    <div *ngIf = "cards[counter].answered"
+    [class] = "cards[counter].answer == cards[counter].answerFromUser ? 'correctAnswer' : 'incorrectAnswer'">
+        {{cards[counter].answer == cards[counter].answerFromUser}}
+    </div>
 
     <button (click) = "changeCard()" 
     *ngIf = "counter < cards.length - 1"> NEXT </button>
+</div>
+
+<div>
+    <app-card-form [cards] = "cards"></app-card-form>
 </div>
